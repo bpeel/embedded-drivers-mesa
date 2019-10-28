@@ -36,7 +36,7 @@ class LayoutRenderObject(RenderObject):
     def get_width(self):
         return self.layout.get_pixel_extents()[1].width / POINTS_PER_MM
 
-    def render(self, cr, x_pos, y_pos):
+    def render(self, cr, x_pos, y_pos, max_width):
         cr.save()
         cr.move_to(x_pos, y_pos)
         # Remove the mm scale
@@ -61,8 +61,9 @@ class ImageRenderObject(RenderObject):
     def get_height(self):
         return self.dim.height * SVG_PX_PER_MM
 
-    def render(self, cr, x_pos, y_pos):
+    def render(self, cr, x_pos, y_pos, max_width):
         cr.save()
+        cr.translate(max_width / 2.0 - self.get_width() / 2.0, 0.0)
         # Scale to mm
         cr.scale(1.0 * SVG_PX_PER_MM, 1.0 * SVG_PX_PER_MM)
         p = cr.get_current_point()
@@ -252,8 +253,7 @@ class SlideRenderer:
         y_pos = PAGE_HEIGHT / 2.0 - total_height / 2.0
 
         for obj in objects:
-            self.cr.move_to(x_pos, y_pos)
-            obj.render(self.cr, x_pos, y_pos)
+            obj.render(self.cr, x_pos, y_pos, max_width)
             y_pos += obj.get_height()
 
         self.slide_num += 1
