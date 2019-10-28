@@ -1,3 +1,34 @@
 SVG: title-page.svg
 ---
 # Overview
+---
+# About GPUs
+
+* It is a specialized electronic circuit designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device. Wikipedia.
+
+* They are becoming increasingly general purpose processors that can run programs (shaders).
+* They are highly threaded and typically use SIMD to operate on multiple inputs at the same time.
+* Still contain fixed function pieces for graphics-specific functions:
+  * Texture sampling
+  * Primitive assembly
+  * etc
+---
+SVG: stack.svg
+---
+# Graphics APIs
+---
+# History of Mesa
+---
+# Architecture of Mesa
+---
+# Embedded drivers
+---
+### Freedreno
+---
+### Panfrost
+---
+### Broadcom
+---
+## Thanks.
+
+## Questions?
