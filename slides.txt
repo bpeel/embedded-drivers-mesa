@@ -77,7 +77,7 @@ SVG: mesa.svg
   * Version 1.0 released in February 1995.
   * Originally used only software rendering
   * Now has support for many different hardware devices
-  * Current version is 18.0.
+  * Current version is 19.2.
 ---
 * There are drivers for:
   * Intel (i965, i915, anv)
