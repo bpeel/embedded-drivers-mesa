@@ -71,7 +71,35 @@ SVG: vulkan.svg
 * Harder to use but allows applications to exploit the hardware better
 * Suitable for both embedded and desktop hardware
 ---
-# History of Mesa
+!## Mesa
+SVG: mesa.svg
+---
+* Open-source implementation of the OpenGL and Vulkan specifications for a variety of hardware on user-space as a library.
+* The Mesa project was originally started by Brian Paul.
+  * Version 1.0 released in February 1995.
+  * Originally used only software rendering
+  * Now has support for many different hardware devices
+  * Current version is 18.0.
+---
+* There are drivers for:
+  * Intel (i965, i915, anv)
+  * AMD (radv, radeonsi, r600)
+  * NVIDIA (nouveau)
+  * Imagination Technologies (imx)
+  * Broadcom (vc4, vc5)
+  * Qualcomm (freedreno)
+  * Software renderers (classic swrast, softpipe, llvmpipe, OpenSWR)
+  * VMware virtual GPU
+  * Etc
+---
+* Supports:
+  * OpenGL 4.6
+  * OpenGL ES 3.2
+  * Vulkan 1.1
+* All are the latest versions
+* Caveat: not all drivers support the latest version
+---
+SVG: mesamatrix.svg
 ---
 # Architecture of Mesa
 ---
