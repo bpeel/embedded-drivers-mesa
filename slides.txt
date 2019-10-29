@@ -1,7 +1,5 @@
 SVG: title-page.svg
 ---
-# Overview
----
 # About GPUs
 
 * It is a specialized electronic circuit designed to rapidly manipulate and alter memory to accelerate the creation of images in a frame buffer intended for output to a display device. Wikipedia.
@@ -150,12 +148,58 @@ SVG: compiler-architecture.svg
 ---
 # Embedded drivers
 ---
-### Freedreno
+## Freedreno
+
+* For Qualcomm Adreno devices
+* Started by Rob Clark in 2012
+* Reversed engineered
+* Supports GL 3.1 and GLES 3.1
+* Continued development by Google and Igalia
 ---
-### Panfrost
+### Devices
+
+* Phones/Tablets:
+  * Nexus 4 (a3xx)
+  * Nexus 7 Flo (a3xx)
+  * Pixel 3a (a6xx)
+* ARM boards:
+  * Inforce 6540 (a4xx)
+  * Inforce 6640 (a5xx)
+  * bSTem (a3xx)
+  * apq8074 dragonboard (a3xx)
+
+SVG: freedreno-devices.svg
 ---
-### Broadcom
+## vc4
+
+* For Broadcom VideoCore IV GPUs
+* Used in the Raspberry Pi 3
+* Written by Eric Anholt while working at Broadcom
+* Developed using the released docs from Broadcom
+* Supports OpenGL ES 3.1
+* Under continued development including by Igalia
 ---
-## Thanks.
+## vc3d
+
+* Project to create a driver for the VideoCore VI GPU in the Rasperry Pi 4
+* Also Started by Eric Anholt
+* Being continued by Igalia
+
+SVG: rpi-ci.svg
+---
+## Panfrost
+
+* For ARM Mali Txxx (Midgard) and Gxx (Bifrost) GPUs
+* Used in Chromebooks
+* Started by Alyssa Rosenzweig
+* Reverse engineered
+* Merged into Mesa master
+* ARM is now contributing to it too
+* Demo from XDC 2019 shows running desktop GL 2.0
+* They are looking to support GL 3.0 and Vulkan
+---
+SVG: panfrost.svg
+---
+# Thanks
 
 ## Questions?
