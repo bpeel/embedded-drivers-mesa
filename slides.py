@@ -270,4 +270,4 @@ def build_slides(input_file, output_file):
         for slide in get_slides(f):
             renderer.render_slide(slide)
 
-build_slides('slides.txt', 'embedded-graphics-drivers.pdf')
+build_slides('slides.txt', 'embedded-drivers-mesa.pdf')
