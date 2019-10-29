@@ -1,0 +1,18 @@
+[require]
+GLSL >= 1.40
+GL >= 2.00
+
+[vertex shader passthrough]
+
+[fragment shader]
+#version 140
+
+uniform vec4 args1, args2;
+
+void main()
+{
+        gl_FragColor = log2(args1) + args2;
+}
+
+[test]
+draw rect -1 -1 2 2

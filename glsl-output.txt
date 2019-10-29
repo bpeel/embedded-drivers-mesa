@@ -1,0 +1,16 @@
+GLSL IR for native fragment shader 3:
+(
+(declare (location=2 shader_out ) vec4 gl_FragColor)
+(declare (location=0 uniform ) vec4 args1)
+(declare (location=1 uniform ) vec4 args2)
+( function main
+  (signature void
+    (parameters)
+    (
+      (assign  (xyzw)
+               (var_ref gl_FragColor)
+               (expression vec4 + (expression vec4 log2 (var_ref args1) )
+                                  (var_ref args2) ) ) 
+    ))
+)
+)

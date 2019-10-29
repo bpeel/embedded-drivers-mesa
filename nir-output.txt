@@ -1,0 +1,19 @@
+impl main {
+	block block_0:
+	/* preds: */
+	vec1 32 ssa_0 = load_const (0x00000000 /* 0.000000 */)
+	vec4 32 ssa_1 = intrinsic load_uniform (ssa_0) (0, 16, 160)
+	vec1 32 ssa_2 = flog2 ssa_1.x
+	vec1 32 ssa_3 = flog2 ssa_1.y
+	vec1 32 ssa_4 = flog2 ssa_1.z
+	vec1 32 ssa_5 = flog2 ssa_1.w
+	vec4 32 ssa_6 = intrinsic load_uniform (ssa_0) (16, 16, 160)
+	vec1 32 ssa_7 = fadd ssa_2, ssa_6.x
+	vec1 32 ssa_8 = fadd ssa_3, ssa_6.y
+	vec1 32 ssa_9 = fadd ssa_4, ssa_6.z
+	vec1 32 ssa_10 = fadd ssa_5, ssa_6.w
+	vec4 32 ssa_11 = vec4 ssa_7, ssa_8, ssa_9, ssa_10
+	intrinsic store_output (ssa_11, ssa_0) (4, 15, 0, 160)
+	/* succs: block_1 */
+	block block_1:
+}

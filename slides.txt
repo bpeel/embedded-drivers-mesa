@@ -105,6 +105,49 @@ SVG: mesamatrix.svg
 ---
 SVG: mesa-architecture.svg
 ---
+* Mesa has a loader that selects the driver by asking for the vendor id, chip id... from the kernel driver via DRM.
+* There is a map of PCI IDs and user-space Mesa drivers.
+* When it is found, Mesa loads the respective driver and sees if the driver succeeds
+* In case of failure, the loader tries software renderers.
+* It is possible to force software renderer
+  * LIBGL ALWAYS SOFTWARE=1
+---
+* The GL API is filtered through the Mesa state tracker into a simpler set of callbacks into the driver.
+  * This handles many things such as GL’s weird object management.
+  * Unifies different APIs from different versions of GL.
+* For the i965 Intel driver, these callbacks are handled directly.
+* For most other drivers, Gallium is used as an extra layer.
+  * This handles even more state tracking such as caching state objects.
+  * Drivers have even less code to implement.
+---
+## Compiler architecture
+---
+SVG: compiler-architecture.svg
+---
+### GLSL example
+
+```
+#include glsl-example.frag
+```
+---
+### GLSL IR
+
+```
+#include glsl-output.txt
+```
+---
+### NIR
+
+```
+#include nir-output.txt
+```
+---
+### Intel i965 instruction set
+
+```
+#include intel-output.txt
+```
+---
 # Embedded drivers
 ---
 ### Freedreno

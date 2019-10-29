@@ -1,0 +1,12 @@
+   START B0 (54 cycles)
+math log(16)    g3<1>F          g2<0,1,0>F      null<8,8,1>F
+math log(16)    g5<1>F          g2.1<0,1,0>F    null<8,8,1>F
+math log(16)    g7<1>F          g2.2<0,1,0>F    null<8,8,1>F
+math log(16)    g9<1>F          g2.3<0,1,0>F    null<8,8,1>F
+add(16)         g120<1>F        g3<8,8,1>F      g2.4<0,1,0>F
+add(16)         g122<1>F        g5<8,8,1>F      g2.5<0,1,0>F
+add(16)         g124<1>F        g7<8,8,1>F      g2.6<0,1,0>F
+add(16)         g126<1>F        g9<8,8,1>F      g2.7<0,1,0>F
+sendc(16)       null<1>UW       g120<8,8,1>UD   0x90031000
+                render MsgDesc: RT write SIMD16 LastRT mlen 8 rlen 0
+   END B0
