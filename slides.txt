@@ -71,7 +71,7 @@ SVG: vulkan.svg
 * Harder to use but allows applications to exploit the hardware better
 * Suitable for both embedded and desktop hardware
 ---
-!## Mesa
+!# Mesa
 SVG: mesa.svg
 ---
 * Open-source implementation of the OpenGL and Vulkan specifications for a variety of hardware on user-space as a library.
@@ -102,6 +102,8 @@ SVG: mesa.svg
 SVG: mesamatrix.svg
 ---
 # Architecture of Mesa
+---
+SVG: mesa-architecture.svg
 ---
 # Embedded drivers
 ---
