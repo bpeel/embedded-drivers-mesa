@@ -182,7 +182,8 @@ SVG: freedreno-devices.svg
 ## vc3d
 
 * Project to create a driver for the VideoCore VI GPU in the Rasperry Pi 4
-* Also Started by Eric Anholt
+* Very different architecture to the previous one
+* Also started by Eric Anholt
 * Being continued by Igalia
 
 SVG: rpi-ci.svg
