@@ -21,6 +21,7 @@ SVG: stack.svg
 ---
 # Graphics APIs
 ---
+!## OpenGL
 SVG: opengl.svg
 ---
 * OpenGL 1.0 was released in January 1992 by Silicon Graphics (SGI).
@@ -59,6 +60,7 @@ SVG: vertex-buffer.svg
 * Removes most of the legacy cruft and things that are hard to implement in hardware.
 * Is increasingly similar to modern versions of OpenGL which also try to deprecate old functionality.
 ---
+!## Vulkan
 SVG: vulkan.svg
 ---
 * Vulkan 1.0 released in 2016

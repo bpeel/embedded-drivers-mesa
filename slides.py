@@ -241,6 +241,11 @@ class SlideRenderer:
         in_code = False
 
         for line in text.split('\n'):
+            md = re.match(r'\!(#+) +(.*)', line)
+            if md is not None:
+                self.add_index_item(len(md.group(1)), md.group(2))
+                continue
+
             if re.match(r'^```\s*$', line):
                 in_code = not in_code
             else:
